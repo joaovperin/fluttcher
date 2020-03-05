@@ -1,3 +1,4 @@
+import 'package:fluttcher/pages/modules/modules.page.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/home/home.page.dart';
@@ -12,7 +13,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
         title: kAppTitle,
         debugShowCheckedModeBanner: false,
@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         home: SplashPage(),
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) => HomePage(title: kAppTitle),
+          '/modules': (BuildContext context) => ModulesPage(title: kAppTitle),
         });
   }
 }

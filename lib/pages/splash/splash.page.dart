@@ -1,10 +1,11 @@
+import 'package:fluttcher/pages/modules/modules.page.dart';
 import 'package:fluttcher/shared/constants/app.constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fluttcher/pages/home/home.page.dart';
 
 ///
-/// Splash page
+/// SplashPage
 ///
 class SplashPage extends StatefulWidget {
   SplashPage({Key key}) : super(key: key);
@@ -14,7 +15,7 @@ class SplashPage extends StatefulWidget {
 }
 
 ///
-/// State for the splash page
+/// State for the SplashPage
 ///
 class SplashPageState extends State<SplashPage> {
   static const kSplashDurationSeconds = 3;
@@ -39,8 +40,10 @@ class SplashPageState extends State<SplashPage> {
   void _gotoHomePage() async {
     Future.delayed(Duration(seconds: kSplashDurationSeconds), () {
       // Navigate to home page
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => HomePage(title: kAppTitle)));
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ModulesPage(title: kAppTitle)));
     });
   }
 }
