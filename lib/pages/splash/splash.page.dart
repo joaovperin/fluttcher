@@ -2,8 +2,6 @@ import 'package:fluttcher/pages/modules/modules.page.dart';
 import 'package:fluttcher/shared/constants/app.constants.dart';
 import 'package:flutter/material.dart';
 
-import 'package:fluttcher/pages/home/home.page.dart';
-
 ///
 /// SplashPage
 ///
