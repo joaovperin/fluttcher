@@ -8,6 +8,8 @@ mixin Loadable {
 ///
 Stream<Loadable> delayedYielder(Duration interval, List<Loadable> list) async* {
   for (var elm in list) {
+    elm.loaded = false;
+    yield elm;
     await Future.delayed(interval);
     elm.loaded = true;
     yield elm;

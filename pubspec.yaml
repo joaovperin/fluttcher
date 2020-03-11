@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_messaging: ^6.0.12
   firebase_analytics: ^5.0.11
+  android_alarm_manager: 0.4.5+5
 
 dev_dependencies:
   flutter_test:

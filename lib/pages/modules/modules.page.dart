@@ -53,9 +53,13 @@ class _ModulesPageState extends State<ModulesPage> {
         Module(name: 'Produto')
       ]),
       builder: (context, snapshot) {
-        if (!snapshot.hasData)
-          return Center(child: CircularProgressIndicator());
+        // If don't have any data
+        if (!snapshot.hasData) return _createCircularIndicator();
         _listModules.add(snapshot.data);
+        // If the data is not loaded yet, show the indicator
+        if (!snapshot.data.loaded) {
+          return _createCircularIndicator();
+        }
         return ListView(
           controller: _scrollController,
           padding: const EdgeInsets.only(top: 20.0),
@@ -65,6 +69,9 @@ class _ModulesPageState extends State<ModulesPage> {
       },
     );
   }
+
+  Center _createCircularIndicator() =>
+      Center(child: CircularProgressIndicator());
 
   Widget _buildListItem(BuildContext context, Module module) {
     return Padding(
